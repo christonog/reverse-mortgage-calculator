@@ -1,10 +1,23 @@
 require 'sinatra'
 
 get '/' do
+
 	erb :calculator	
+
 end
 
 post '/' do
+
+	erb :results
+
+end
+
+get '/about' do
+
+	"a Chris Tonog production"
+	
+end
+
 =begin
 	
 A = (P/i)[1 − (1+i)^-N], where
@@ -18,10 +31,3 @@ P   	the amount of each equal payment
 to get the 	
 =end
 
-
-	number1 = params[:number1].to_i
-	number2 = params[:number2].to_i
-	number3 = params[:number3].to_i
-
-	"#{number1} + #{number2} + #{number3} is #{number1 + number2 + number3}"
-end
