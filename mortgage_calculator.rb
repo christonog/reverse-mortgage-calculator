@@ -27,7 +27,8 @@ post '/' do
 	monthly_payment = params[:monthly_payment].to_i 
 	interest_rate_per_period = interest_rate/12.0
 	number_of_payments = 360 
-	@loan_amount = (monthly_payment/interest_rate_per_period) * (1-(1+interest_rate_per_period)**-360) 
+	@loan_amount = (monthly_payment/interest_rate_per_period) * (1-(1+interest_rate_per_period)**-360)
+
 	erb :results
 
 end
